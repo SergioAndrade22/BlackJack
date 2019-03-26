@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name" translatable="false">Blackjack</string>
+    <string name="vsIA">Player vs IA</string>
+    <string name="vsP">Player vs Player</string>
+    <string name="history">Historic Results</string>
+    <string name="description">Main Screen Logo</string>
+    <string name="details">Design and Developed by: Sergio Andrade</string>
+    <string name="draw">Draw</string>
+    <string name="stay">Stay</string>
+    <string name="deck">Deck Back Logo</string>
+    <string name="table">Table image</string>
+</resources>
