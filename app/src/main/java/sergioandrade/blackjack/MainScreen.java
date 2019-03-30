@@ -21,4 +21,9 @@ public class MainScreen extends PortraitScreen {
         Intent intent = new Intent(this, PlayerVsIA.class);
         startActivity(intent);
     }
+
+    public void about(View view){
+        Intent intent = new Intent(this, AboutScreen.class);
+        startActivity(intent);
+    }
 }

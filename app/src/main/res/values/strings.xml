@@ -3,8 +3,13 @@
     <string name="vsIA">Player vs IA</string>
     <string name="vsP">Player vs Player</string>
     <string name="history">Historic Results</string>
+    <string name="about">About</string>
     <string name="description">Main Screen Logo</string>
-    <string name="details">Design and Developed by: Sergio Andrade and Javier Fernandez Tierno</string>
+    <string name="details">Design and Developed by: \n
+                            Sergio David Andrade Colombani \n
+                            LU: 114059 \n
+                            Javier Fernández Tierno \n
+                            LU: 106243 </string>
     <string name="draw">Draw</string>
     <string name="stay">Stay</string>
     <string name="deck">Deck Back Logo</string>
