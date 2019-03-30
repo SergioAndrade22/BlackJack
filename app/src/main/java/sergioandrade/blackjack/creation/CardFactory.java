@@ -1,4 +1,4 @@
-package sergioandrade.blackjack;
+package sergioandrade.blackjack.creation;
 
 import java.util.ArrayList;
 import java.util.Collection;

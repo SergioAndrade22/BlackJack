@@ -1,9 +1,11 @@
-package sergioandrade.blackjack;
+package sergioandrade.blackjack.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import sergioandrade.blackjack.R;
 
 
 public class MainScreen extends PortraitScreen {

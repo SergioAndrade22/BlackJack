@@ -1,4 +1,6 @@
-package sergioandrade.blackjack;
+package sergioandrade.blackjack.gameLogic;
+
+import sergioandrade.blackjack.creation.Deck;
 
 public class PlayerIntelligence extends Intelligence {
 

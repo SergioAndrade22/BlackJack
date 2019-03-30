@@ -1,6 +1,8 @@
-package sergioandrade.blackjack;
+package sergioandrade.blackjack.activities;
 
 import android.os.Bundle;
+
+import sergioandrade.blackjack.R;
 
 public class AboutScreen extends PortraitScreen {
 

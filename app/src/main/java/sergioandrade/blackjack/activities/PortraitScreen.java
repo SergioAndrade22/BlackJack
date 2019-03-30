@@ -1,4 +1,4 @@
-package sergioandrade.blackjack;
+package sergioandrade.blackjack.activities;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package sergioandrade.blackjack;
+package sergioandrade.blackjack.gameLogic;
 
 public class Score {
     private int score;

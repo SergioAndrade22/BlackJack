@@ -1,6 +1,8 @@
-package sergioandrade.blackjack;
+package sergioandrade.blackjack.gameLogic;
 
 import java.util.ArrayList;
+
+import sergioandrade.blackjack.creation.Card;
 
 public abstract class Hand {
     protected ArrayList<Card> hand = new ArrayList<Card>();

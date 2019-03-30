@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".MainScreen">
+            android:name=".activities.MainScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -19,13 +19,13 @@
         </activity>
 
         <activity
-            android:name=".PlayerVsIA"
-            android:parentActivityName=".MainScreen">
+            android:name=".activities.PlayerVsIA"
+            android:parentActivityName=".activities.MainScreen">
         </activity>
 
         <activity
-            android:name=".AboutScreen"
-            android:parentActivityName=".MainScreen">
+            android:name=".activities.AboutScreen"
+            android:parentActivityName=".activities.MainScreen">
         </activity>
     </application>
 

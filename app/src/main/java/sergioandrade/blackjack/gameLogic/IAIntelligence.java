@@ -1,4 +1,7 @@
-package sergioandrade.blackjack;
+package sergioandrade.blackjack.gameLogic;
+
+import sergioandrade.blackjack.creation.Card;
+import sergioandrade.blackjack.creation.Deck;
 
 public class IAIntelligence extends Intelligence {
     private int counter;
