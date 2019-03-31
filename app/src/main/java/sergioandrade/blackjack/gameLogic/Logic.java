@@ -1,5 +1,6 @@
 package sergioandrade.blackjack.gameLogic;
 
+import sergioandrade.blackjack.activities.PlayerVsIA;
 import sergioandrade.blackjack.creation.Card;
 import sergioandrade.blackjack.creation.Deck;
 
@@ -7,13 +8,15 @@ public class Logic {
     private Deck deck;
     private PlayerHand playerHand;
     private IAHand iaHand;
+    private PlayerVsIA pvia;
 
-    public Logic(){
+    public Logic(PlayerVsIA p){
         deck = Deck.getInstance();
         playerHand = new PlayerHand();
         iaHand = new IAHand();
         Mediator.getInstance();
         Mediator.setColleague(this);
+        pvia = p;
     }
 
     public void deal(){
@@ -29,18 +32,21 @@ public class Logic {
     public void draw(){
         if (!deck.isEmpty()) {
             playerHand.act();
+            pvia.disableDraw();
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             iaHand.act();
+            pvia.enableDraw();
         }
     }
 
     public void stay(){
         if (!deck.isEmpty())
             iaHand.act();
+        pvia.disableDraw();
     }
 
     public String getPlayerDisplay(){
@@ -52,10 +58,10 @@ public class Logic {
     }
 
     public void win(){
-
+        pvia.callWin();
     }
 
     public void lose(){
-
+        pvia.callLose();
     }
 }

@@ -3,13 +3,13 @@ package sergioandrade.blackjack.activities;
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import sergioandrade.blackjack.database.DatabaseContract;
 import sergioandrade.blackjack.database.DatabaseHelper;
 import sergioandrade.blackjack.gameLogic.Logic;
@@ -36,7 +36,7 @@ public class PlayerVsIA extends PortraitScreen {
             }
         });
         builder.show();
-        logic = new Logic();
+        logic = new Logic(this);
         logic.deal();
         TextView playerDisplay = (TextView) findViewById(R.id.playerScore);
         playerDisplay.setText(logic.getPlayerDisplay());
@@ -65,5 +65,25 @@ public class PlayerVsIA extends PortraitScreen {
         db.insert(DatabaseContract.FeedEntry.TABLE_NAME, null, values);
 
         db.close();
+    }
+
+    public void disableDraw(){
+        Button draw = (Button) findViewById(R.id.draw);
+        draw.setEnabled(false);
+    }
+
+    public void enableDraw(){
+        Button draw = (Button) findViewById(R.id.draw);
+        draw.setEnabled(true);
+    }
+
+    public void callWin(){
+        Intent intent = new Intent(this, WinActivity.class);
+        startActivity(intent);
+    }
+
+    public void callLose(){
+        Intent intent = new Intent(this, LoseActivity.class);
+        startActivity(intent);
     }
 }
