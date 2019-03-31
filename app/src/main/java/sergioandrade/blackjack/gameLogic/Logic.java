@@ -12,6 +12,8 @@ public class Logic {
         deck = Deck.getInstance();
         playerHand = new PlayerHand();
         iaHand = new IAHand();
+        Mediator.getInstance();
+        Mediator.setColleague(this);
     }
 
     public void deal(){
@@ -27,6 +29,11 @@ public class Logic {
     public void draw(){
         if (!deck.isEmpty()) {
             playerHand.act();
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             iaHand.act();
         }
     }
@@ -42,5 +49,13 @@ public class Logic {
 
     public String getIADisplay(){
         return iaHand.getScoreDisplay();
+    }
+
+    public void win(){
+
+    }
+
+    public void lose(){
+
     }
 }

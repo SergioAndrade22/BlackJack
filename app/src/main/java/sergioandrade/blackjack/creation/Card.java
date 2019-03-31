@@ -61,6 +61,4 @@ public class Card {
     public Icon getImage(){
         return image[0];
     }
-
-    
 }
