@@ -7,20 +7,18 @@ public class Mediator {
     private Mediator(){ }
 
     public static Mediator getInstance(){
-        synchronized (instance) {
             return (instance == null) ? instance = new Mediator() : instance;
-        }
     }
 
     public static void setColleague(Logic l){
         colleague = l;
     }
 
-    public static void win(){
+    public void win(){
         colleague.win();
     }
 
-    public static void lose(){
+    public void lose(){
         colleague.lose();
     }
 }
