@@ -27,6 +27,16 @@
             android:name=".activities.AboutScreen"
             android:parentActivityName=".activities.MainScreen">
         </activity>
+
+        <activity
+            android:name=".activities.LoseActivity"
+            android:parentActivityName=".activities.MainScreen">
+        </activity>
+
+        <activity
+            android:name=".activities.WinActivity"
+            android:parentActivityName=".activities.MainScreen">
+        </activity>
     </application>
 
 </manifest>

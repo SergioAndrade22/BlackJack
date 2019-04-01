@@ -38,33 +38,22 @@ public class PlayerVsIA extends PortraitScreen {
         builder.show();
         logic = new Logic(this);
         logic.deal();
-        TextView playerDisplay = (TextView) findViewById(R.id.playerScore);
+        TextView playerDisplay = findViewById(R.id.playerScore);
         playerDisplay.setText(logic.getPlayerDisplay());
-        TextView iaDisplay = (TextView) findViewById(R.id.iaScore);
+        TextView iaDisplay = findViewById(R.id.iaScore);
         iaDisplay.setText(logic.getIADisplay());
     }
 
     public void draw(View view){
         logic.draw();
-        TextView playerDisplay = (TextView) findViewById(R.id.playerScore);
+        TextView playerDisplay = findViewById(R.id.playerScore);
         playerDisplay.setText(logic.getPlayerDisplay());
-        TextView iaDisplay = (TextView) findViewById(R.id.iaScore);
+        TextView iaDisplay = findViewById(R.id.iaScore);
         iaDisplay.setText(logic.getIADisplay());
     }
 
     public void stay(View view){
         logic.stay();
-    }
-
-    public void saveInDB(String username){
-        SQLiteDatabase db =  new DatabaseHelper(this).getWritableDatabase();
-        ContentValues values = new ContentValues();
-
-        values.put(DatabaseContract.FeedEntry.COLUMN_NAME_TITLE, username);
-
-        db.insert(DatabaseContract.FeedEntry.TABLE_NAME, null, values);
-
-        db.close();
     }
 
     public void disableDraw(){
@@ -79,11 +68,13 @@ public class PlayerVsIA extends PortraitScreen {
 
     public void callWin(){
         Intent intent = new Intent(this, WinActivity.class);
+        intent.putExtra("player",username);
         startActivity(intent);
     }
 
     public void callLose(){
         Intent intent = new Intent(this, LoseActivity.class);
+        intent.putExtra("player",username);
         startActivity(intent);
     }
 }
