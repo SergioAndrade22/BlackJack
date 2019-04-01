@@ -46,5 +46,17 @@ public class LoseActivity extends PortraitScreen {
             db.insert(DatabaseContract.FeedEntry.TABLE_NAME, null, values);
             db.close();
         }
+        else{
+            db = new DatabaseHelper(this).getReadableDatabase();
+            String[] columns = {DatabaseContract.FeedEntry.USER_COL_LOSE};
+            cursor = db.query(DatabaseContract.FeedEntry.TABLE_NAME, columns, DatabaseContract.FeedEntry.COLUMN_NAME_TITLE + " = '" + username + "'", null, null, null, null);
+            cursor.moveToFirst();
+            int res = cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseContract.FeedEntry.USER_COL_LOSE));
+            res++;
+            ContentValues values = new ContentValues();
+            values.put(DatabaseContract.FeedEntry.COLUMN_NAME_TITLE, username);
+            values.put(DatabaseContract.FeedEntry.USER_COL_LOSE, res);
+            db.close();
+        }
     }
 }
