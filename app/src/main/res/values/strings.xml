@@ -14,4 +14,6 @@
     <string name="stay">Stay</string>
     <string name="deck">Deck Back Logo</string>
     <string name="table">Table image</string>
+    <string name="win">Table image</string>
+    <string name="lose">Table image</string>
 </resources>
