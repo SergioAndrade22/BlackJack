@@ -5,20 +5,35 @@ import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import sergioandrade.blackjack.database.DatabaseContract;
 import sergioandrade.blackjack.database.DatabaseHelper;
 import sergioandrade.blackjack.gameLogic.Logic;
 import sergioandrade.blackjack.R;
 
+
 public class PlayerVsIA extends PortraitScreen {
     private EditText input;
     private String username;
     private Logic logic;
+
+    //Listas de cartas
+    ListView CartasJugador;
+    ListView CartasIA;
+
+    int[] imagenes = {
+            R.drawable.club_1,
+            R.drawable.club_2,
+            R.drawable.club_3,
+            R.drawable.club_4
+    };
 
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -42,6 +57,13 @@ public class PlayerVsIA extends PortraitScreen {
         playerDisplay.setText(logic.getPlayerDisplay());
         TextView iaDisplay = findViewById(R.id.iaScore);
         iaDisplay.setText(logic.getIADisplay());
+
+
+        //Creacion de las listas para las cartas
+        CartasIA= (ListView) findViewById(R.id.CartasIA);
+        CartasJugador= (ListView) findViewById(R.id.CartasJugador);
+
+
     }
 
     public void draw(View view){
