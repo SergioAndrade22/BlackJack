@@ -24,10 +24,6 @@ public class PlayerVsIA extends PortraitScreen {
     private String username;
     private Logic logic;
 
-    //Listas de cartas
-    ListView CartasJugador;
-    ListView CartasIA;
-
     int[] imagenes = {
             R.drawable.club_1,
             R.drawable.club_2,
@@ -57,12 +53,6 @@ public class PlayerVsIA extends PortraitScreen {
         playerDisplay.setText(logic.getPlayerDisplay());
         TextView iaDisplay = findViewById(R.id.iaScore);
         iaDisplay.setText(logic.getIADisplay());
-
-
-        //Creacion de las listas para las cartas
-        CartasIA= (ListView) findViewById(R.id.CartasIA);
-        CartasJugador= (ListView) findViewById(R.id.CartasJugador);
-
 
     }
 
