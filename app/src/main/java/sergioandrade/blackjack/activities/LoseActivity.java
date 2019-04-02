@@ -52,13 +52,24 @@ public class LoseActivity extends PortraitScreen {
             cursor = db.query(DatabaseContract.FeedEntry.TABLE_NAME, columns, DatabaseContract.FeedEntry.COLUMN_NAME_TITLE + " = '" + username + "'", null, null, null, null);
             cursor.moveToFirst();
             int res = cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseContract.FeedEntry.USER_COL_LOSE));
+
+            System.out.print("El valor inicial es: " + res);
+
             res++;
             db.close();
             db= new DatabaseHelper(this).getWritableDatabase();
             ContentValues values = new ContentValues();
             values.put(DatabaseContract.FeedEntry.COLUMN_NAME_TITLE, username);
             values.put(DatabaseContract.FeedEntry.USER_COL_LOSE, res);
-            db.insert(DatabaseContract.FeedEntry.TABLE_NAME, null,values);
+            db.replace(DatabaseContract.FeedEntry.TABLE_NAME, null,values);
+            db.close();
+
+
+            db = new DatabaseHelper(this).getReadableDatabase();
+            cursor = db.query(DatabaseContract.FeedEntry.TABLE_NAME, columns, DatabaseContract.FeedEntry.COLUMN_NAME_TITLE + " = '" + username + "'", null, null, null, null);
+            cursor.moveToFirst();
+            res = cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseContract.FeedEntry.USER_COL_LOSE));
+            System.out.print("El valor actualizado es: " + res);
             db.close();
         }
     }
