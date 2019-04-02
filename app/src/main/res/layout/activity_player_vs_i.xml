@@ -13,6 +13,7 @@
         android:contentDescription="@string/table"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/table" />
@@ -87,7 +88,7 @@
     <ListView
         android:id="@+id/CartasJugador"
         android:layout_width="343dp"
-        android:layout_height="215dp"
+        android:layout_height="168dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="440dp"
@@ -107,10 +108,10 @@
     <ListView
         android:id="@+id/CartasIA"
         android:layout_width="343dp"
-        android:layout_height="139dp"
+        android:layout_height="141dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
@@ -119,6 +120,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.231" />
 
 </android.support.constraint.ConstraintLayout>
