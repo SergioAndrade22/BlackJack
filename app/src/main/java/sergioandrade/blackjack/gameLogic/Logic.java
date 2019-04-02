@@ -1,5 +1,7 @@
 package sergioandrade.blackjack.gameLogic;
 
+import android.graphics.Bitmap;
+
 import sergioandrade.blackjack.activities.PlayerVsIA;
 import sergioandrade.blackjack.creation.Card;
 import sergioandrade.blackjack.creation.Deck;
@@ -63,5 +65,9 @@ public class Logic {
 
     public void lose(){
         pvia.callLose();
+    }
+
+    public void addImage(Card c){
+        pvia.addImage(c);
     }
 }

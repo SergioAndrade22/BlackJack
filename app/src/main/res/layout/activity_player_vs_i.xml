@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/table" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/deckBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/deck"
@@ -61,11 +61,11 @@
         android:layout_marginLeft="177dp"
         android:layout_marginEnd="176dp"
         android:layout_marginRight="176dp"
-        android:layout_marginBottom="104dp"
+        android:layout_marginBottom="236dp"
         android:text="playerScore"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -79,11 +79,11 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/imageView8"
+        app:layout_constraintBottom_toTopOf="@+id/deckBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.762" />
 
     <android.support.v7.widget.GridLayout
         android:id="@+id/CartasJugador"
@@ -100,7 +100,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.687">
+        app:layout_constraintVertical_bias="0.835">
 
         <ImageView
             android:id="@+id/JPrimeraCarta"

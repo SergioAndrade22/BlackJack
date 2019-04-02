@@ -1,5 +1,9 @@
 package sergioandrade.blackjack.gameLogic;
 
+import android.graphics.Bitmap;
+
+import sergioandrade.blackjack.creation.Card;
+
 public class Mediator {
     private static Logic colleague;
     private static Mediator instance;
@@ -20,5 +24,9 @@ public class Mediator {
 
     public void lose(){
         colleague.lose();
+    }
+
+    public void addImage(Card c){
+        colleague.addImage(c);
     }
 }
