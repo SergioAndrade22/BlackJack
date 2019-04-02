@@ -8,6 +8,7 @@ public abstract class Hand {
     protected ArrayList<Card> hand = new ArrayList<Card>();
     protected Intelligence intelligence;
     protected Score score;
+    protected
 
     public void act(){
         intelligence.act();
@@ -16,6 +17,7 @@ public abstract class Hand {
     public void add(Card c){
         hand.add(c);
         score.update(c.getValue());
+
     }
 
     public int getScore(){

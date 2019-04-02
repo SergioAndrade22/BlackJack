@@ -1,6 +1,11 @@
 package sergioandrade.blackjack.creation;
 
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Icon;
+import android.media.Image;
+
+import sergioandrade.blackjack.R;
 
 /**
  * Emulates the cards used on a Deck
@@ -8,7 +13,7 @@ import android.graphics.drawable.Icon;
 public class Card {
     private String suit;
     private int value;
-    private Icon image[];
+    private BitmapDrawable image;
 
     /**
      * Constructor, builds the card upside down
@@ -18,7 +23,7 @@ public class Card {
     public Card(String s, int v){
         suit = s;
         value = v;
-        image = new Icon[1];
+        image = new BitmapDrawable();
     }
 
     /**
@@ -59,6 +64,12 @@ public class Card {
      * @return card's image
      */
     public Icon getImage(){
-        return image[0];
+
+        switch (value){
+            case 1 : {
+                image = new BitmapDrawable(R.drawable.club_1);
+            }
+        }
+
     }
 }
