@@ -15,6 +15,7 @@ public abstract class Hand {
 
     public void add(Card c){
         hand.add(c);
+        Mediator.getInstance().addImage(c);
         score.update(c.getValue());
     }
 

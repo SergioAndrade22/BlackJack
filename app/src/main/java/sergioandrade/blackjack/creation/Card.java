@@ -1,6 +1,16 @@
 package sergioandrade.blackjack.creation;
 
+<<<<<<< HEAD
 import android.graphics.drawable.BitmapDrawable;
+=======
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.DrawableContainer;
+import android.graphics.drawable.Icon;
+import android.media.Image;
+>>>>>>> 99ed592711cae309f5858180453fcdaeaaa79e39
 
 
 /**
@@ -9,7 +19,7 @@ import android.graphics.drawable.BitmapDrawable;
 public class Card {
     private String suit;
     private int value;
-    private BitmapDrawable image;
+    private int represValue;
 
     /**
      * Constructor, builds the card upside down
@@ -18,8 +28,7 @@ public class Card {
      */
     public Card(String s, int v){
         suit = s;
-        value = v;
-        image = new BitmapDrawable();
+        value = represValue = v;
     }
 
     /**
@@ -55,6 +64,7 @@ public class Card {
         return toRet;
     }
 
+<<<<<<< HEAD
     /**
      * Return the image of the card that varies from upside down or normal
      * @return card's image
@@ -68,6 +78,14 @@ public class Card {
             }
         }
         return image;
+=======
+    public int getRepresValue(){
+        return represValue;
+    }
+
+    public String getSuit(){
+        return suit;
+>>>>>>> 99ed592711cae309f5858180453fcdaeaaa79e39
     }
     */
 }
