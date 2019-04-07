@@ -43,7 +43,7 @@ public class PlayerVsIA extends PortraitScreen {
                 TextView iaDisplay = findViewById(R.id.iaScore);
                 iaDisplay.setText(logic.getIADisplay());
             }
-        }); 
+        });
         builder.show();
         logic = new Logic(this);
     }
