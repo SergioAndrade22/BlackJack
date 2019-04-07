@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -36,15 +37,15 @@ public class PlayerVsIA extends PortraitScreen {
         builder.setPositiveButton("Submit", new DialogInterface.OnClickListener(){
             public void onClick(DialogInterface dialog, int which){
                 username = input.getText().toString();
+                logic.deal();
+                TextView playerDisplay = findViewById(R.id.playerScore);
+                playerDisplay.setText(logic.getPlayerDisplay());
+                TextView iaDisplay = findViewById(R.id.iaScore);
+                iaDisplay.setText(logic.getIADisplay());
             }
-        });
+        }); 
         builder.show();
         logic = new Logic(this);
-        logic.deal();
-        TextView playerDisplay = findViewById(R.id.playerScore);
-        playerDisplay.setText(logic.getPlayerDisplay());
-        TextView iaDisplay = findViewById(R.id.iaScore);
-        iaDisplay.setText(logic.getIADisplay());
     }
 
     public void draw(View view){
@@ -81,13 +82,23 @@ public class PlayerVsIA extends PortraitScreen {
         startActivity(intent);
     }
 
-    public void addImage(Card c){
+    public void addCardPlayer(Card c){
         int id = c.getDrawable();
         Resources res = getResources();
         Bitmap b = BitmapFactory.decodeResource(res, id);
         ImageView view = new ImageView(this);
         view.setImageBitmap(Bitmap.createScaledBitmap(b, 100, 140, false));
-        ListView list = findViewById(R.id.playerCards);
-        list.addFooterView(view);
+        LinearLayout layout = findViewById(R.id.playerCards);
+        layout.addView(view);
+    }
+
+    public void addCardIA(Card c){
+        int id = c.getDrawable();
+        Resources res = getResources();
+        Bitmap b = BitmapFactory.decodeResource(res, id);
+        ImageView view = new ImageView(this);
+        view.setImageBitmap(Bitmap.createScaledBitmap(b, 100, 140, false));
+        LinearLayout layout = findViewById(R.id.cardsIA);
+        layout.addView(view);
     }
 }

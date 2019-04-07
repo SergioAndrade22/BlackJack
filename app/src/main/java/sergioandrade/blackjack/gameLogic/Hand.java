@@ -13,11 +13,7 @@ public abstract class Hand {
         intelligence.act();
     }
 
-    public void add(Card c){
-        hand.add(c);
-        Mediator.getInstance().addImage(c);
-        score.update(c.getValue());
-    }
+    public abstract void add(Card c);
 
     public int getScore(){
         return score.getScore();

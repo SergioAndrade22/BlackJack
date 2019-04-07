@@ -67,7 +67,11 @@ public class Logic {
         pvia.callLose();
     }
 
-    public void addImage(Card c){
-        pvia.addImage(c);
+    public void addCardPlayer(Card c){
+        pvia.addCardPlayer(c);
+    }
+
+    public void addCardIA(Card c){
+        pvia.addCardIA(c);
     }
 }

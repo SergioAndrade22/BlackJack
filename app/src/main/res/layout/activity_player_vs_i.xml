@@ -7,7 +7,7 @@
     tools:context=".activities.PlayerVsIA">
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/background"
         android:layout_width="770dp"
         android:layout_height="519dp"
         android:contentDescription="@string/table"
@@ -27,6 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.428"
         app:srcCompat="@drawable/back" />
 
     <Button
@@ -56,17 +57,20 @@
     <TextView
         android:id="@+id/playerScore"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="18dp"
         android:layout_marginStart="177dp"
         android:layout_marginLeft="177dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="176dp"
         android:layout_marginRight="176dp"
-        android:layout_marginBottom="164dp"
+        android:layout_marginBottom="8dp"
         android:text="playerScore"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deckBack"
+        app:layout_constraintVertical_bias="0.06999999" />
 
     <TextView
         android:id="@+id/iaScore"
@@ -74,35 +78,50 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="106dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/deckBack"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.182" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <ListView
+    <LinearLayout
         android:id="@+id/playerCards"
-        android:layout_width="425dp"
-        android:layout_height="115dp"
+        android:layout_width="315dp"
+        android:layout_height="139dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:addStatesFromChildren="false"
-        android:focusableInTouchMode="false"
-        android:isScrollContainer="false"
-        android:keepScreenOn="false"
-        android:longClickable="false"
+        android:animateLayoutChanges="true"
+        android:clickable="false"
         android:orientation="horizontal"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/playerScore"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deckBack" />
+        app:layout_constraintTop_toBottomOf="@+id/playerScore"
+        app:layout_constraintVertical_bias="0.39"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cardsIA"
+        android:layout_width="315dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/iaScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.79"></LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

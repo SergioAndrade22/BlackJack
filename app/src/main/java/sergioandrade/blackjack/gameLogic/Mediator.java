@@ -26,7 +26,11 @@ public class Mediator {
         colleague.lose();
     }
 
-    public void addImage(Card c){
-        colleague.addImage(c);
+    public void addCardPlayer(Card c){
+        colleague.addCardPlayer(c);
+    }
+
+    public void addCardIA(Card c){
+        colleague.addCardIA(c);
     }
 }
