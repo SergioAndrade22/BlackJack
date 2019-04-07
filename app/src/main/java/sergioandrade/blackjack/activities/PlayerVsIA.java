@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import sergioandrade.blackjack.creation.Card;
@@ -81,10 +82,14 @@ public class PlayerVsIA extends PortraitScreen {
     }
 
     public void addImage(Card c){
-        ImageView view = findViewById(R.id.deckBack);
-        Resources res = getResources();
+        ListView list = findViewById(R.id.playerCards);
         int id = c.getDrawable();
+        /*
+        Resources res = getResources();
         Bitmap b = BitmapFactory.decodeResource(res, id);
-        view.setImageBitmap(Bitmap.createScaledBitmap(b, 100, 140, false));
+        */
+        View view = new View(this);
+        view.setBackgroundResource(id);
+        list.addFooterView(view);
     }
 }

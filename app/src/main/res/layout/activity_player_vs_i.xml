@@ -61,7 +61,7 @@
         android:layout_marginLeft="177dp"
         android:layout_marginEnd="176dp"
         android:layout_marginRight="176dp"
-        android:layout_marginBottom="236dp"
+        android:layout_marginBottom="164dp"
         android:text="playerScore"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,92 +83,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.762" />
+        app:layout_constraintVertical_bias="0.182" />
 
-    <android.support.v7.widget.GridLayout
-        android:id="@+id/CartasJugador"
-        android:layout_width="395dp"
-        android:layout_height="120dp"
+    <ListView
+        android:id="@+id/playerCards"
+        android:layout_width="425dp"
+        android:layout_height="115dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:addStatesFromChildren="false"
+        android:focusableInTouchMode="false"
+        android:isScrollContainer="false"
+        android:keepScreenOn="false"
+        android:longClickable="false"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/playerScore"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.835">
-
-        <ImageView
-            android:id="@+id/JPrimeraCarta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/back" />
-
-        <ImageView
-            android:id="@+id/JSegundaCarta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/back" />
-
-        <ImageView
-            android:id="@+id/JTerceraCarta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/back" />
-
-        <ImageView
-            android:id="@+id/JCuartaCarta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_column="3"
-            app:layout_row="0"
-            app:srcCompat="@drawable/back" />
-    </android.support.v7.widget.GridLayout>
-
-    <android.support.v7.widget.GridLayout
-        android:id="@+id/CartasIA"
-        android:layout_width="404dp"
-        android:layout_height="107dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.192">
-
-        <ImageView
-            android:id="@+id/PrimeraCarta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/back" />
-
-        <ImageView
-            android:id="@+id/SegundaCarta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/back" />
-
-        <ImageView
-            android:id="@+id/TerceraCarta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/back" />
-
-        <ImageView
-            android:id="@+id/CuartaCarta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/back" />
-    </android.support.v7.widget.GridLayout>
+        app:layout_constraintTop_toBottomOf="@+id/deckBack" />
 
 </android.support.constraint.ConstraintLayout>
