@@ -60,12 +60,12 @@ public class PlayerVsIA extends PortraitScreen {
     }
 
     public void disableDraw(){
-        Button draw = (Button) findViewById(R.id.draw);
+        Button draw = findViewById(R.id.draw);
         draw.setEnabled(false);
     }
 
     public void enableDraw(){
-        Button draw = (Button) findViewById(R.id.draw);
+        Button draw = findViewById(R.id.draw);
         draw.setEnabled(true);
     }
 
@@ -82,14 +82,12 @@ public class PlayerVsIA extends PortraitScreen {
     }
 
     public void addImage(Card c){
-        ListView list = findViewById(R.id.playerCards);
         int id = c.getDrawable();
-        /*
         Resources res = getResources();
         Bitmap b = BitmapFactory.decodeResource(res, id);
-        */
-        View view = new View(this);
-        view.setBackgroundResource(id);
+        ImageView view = new ImageView(this);
+        view.setImageBitmap(Bitmap.createScaledBitmap(b, 100, 140, false));
+        ListView list = findViewById(R.id.playerCards);
         list.addFooterView(view);
     }
 }
