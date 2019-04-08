@@ -37,6 +37,10 @@
             android:name=".activities.WinActivity"
             android:parentActivityName=".activities.MainScreen">
         </activity>
+
+        <activity android:name=".activities.History"
+            android:parentActivityName=".activities.MainScreen">
+        </activity>
     </application>
 
 </manifest>

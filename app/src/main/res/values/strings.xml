@@ -16,4 +16,5 @@
     <string name="table">Table image</string>
     <string name="win">Table image</string>
     <string name="lose">Table image</string>
+    <string name="historic">Username: \t \t \t \t \t \t \t \t Wins: \t \t \t \t \t \t \t \t Lose:</string>
 </resources>

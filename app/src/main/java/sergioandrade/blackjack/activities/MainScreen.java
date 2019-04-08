@@ -28,4 +28,9 @@ public class MainScreen extends PortraitScreen {
         Intent intent = new Intent(this, AboutScreen.class);
         startActivity(intent);
     }
+
+    public void history(View view){
+        Intent intent = new Intent(this, History.class);
+        startActivity(intent);
+    }
 }

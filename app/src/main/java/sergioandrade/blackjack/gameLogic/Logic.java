@@ -41,14 +41,30 @@ public class Logic {
                 e.printStackTrace();
             }
             iaHand.act();
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             pvia.enableDraw();
         }
     }
 
     public void stay(){
-        if (!deck.isEmpty())
+        if (!deck.isEmpty()) {
             iaHand.act();
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
         pvia.disableDraw();
+        if (playerHand.getScore() >= iaHand.getScore()){
+            win();
+        }
+        else
+            lose();
     }
 
     public String getPlayerDisplay(){
