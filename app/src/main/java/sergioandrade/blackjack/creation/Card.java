@@ -1,27 +1,15 @@
 package sergioandrade.blackjack.creation;
 
-/**
- * Emulates the cards used on a Deck
- */
 public class Card {
     private String suit;
     private int value;
     private int drawable;
 
-    /**
-     * Constructor, builds the card upside down
-     * @param s card's suit
-     * @param v card's value
-     */
     public Card(String s, int v){
         suit = s;
         value = v;
     }
 
-    /**
-     * Returns the value of the card, for the purposes of the application this values varies from 2-11
-     * @return card's value
-     */
     public int getValue(){
         int toRet = 0;
         switch (value){

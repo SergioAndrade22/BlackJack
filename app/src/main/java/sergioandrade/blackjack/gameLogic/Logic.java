@@ -1,7 +1,5 @@
 package sergioandrade.blackjack.gameLogic;
 
-import android.graphics.Bitmap;
-
 import sergioandrade.blackjack.activities.PlayerVsIA;
 import sergioandrade.blackjack.creation.Card;
 import sergioandrade.blackjack.creation.Deck;

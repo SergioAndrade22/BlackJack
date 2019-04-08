@@ -1,7 +1,5 @@
 package sergioandrade.blackjack.gameLogic;
 
-import android.graphics.Bitmap;
-
 import sergioandrade.blackjack.creation.Card;
 
 public class Mediator {

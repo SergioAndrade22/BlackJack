@@ -3,11 +3,6 @@ package sergioandrade.blackjack.database;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import sergioandrade.blackjack.activities.WinActivity;
 import sergioandrade.blackjack.database.DatabaseContract.FeedEntry;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
@@ -38,25 +33,4 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         onUpgrade(db, oldVersion, newVersion);
     }
-    /*
-    class Valores{
-        String nickname;
-        int wins;
-        int close;
-        public Valores(String n, int w, int c){
-            nickname=n;
-            wins=w;
-            close=c;
-        }
-    }
-    //Tratando de obtener una fila de la base de datos, copiado y pegado de : https://stackoverflow.com/questions/26355615/getting-single-row-from-table-in-sqlite-android
-    /*
-    public List<Valores> getDatabaseRow(){
-        List<Valores> valores= new ArrayList<Valores>();
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        String selectQuery = "SELECT  * FROM " + TABLE_USERMEALUNIT + " WHERE "
-                + TABLE_USERMEALUNIT_ID + " = " + mealid;
-    }
-    */
 }

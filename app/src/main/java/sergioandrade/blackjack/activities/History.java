@@ -4,7 +4,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
 import sergioandrade.blackjack.R;
 import sergioandrade.blackjack.database.DatabaseContract;
@@ -31,6 +30,7 @@ public class History extends PortraitScreen {
         view1.addView(u);
         view2.addView(w);
         view3.addView(l);
+
         while(cursor.moveToNext()){
             String username = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseContract.FeedEntry.COLUMN_NAME_TITLE));
             int win = cursor.getInt(cursor.getColumnIndexOrThrow(DatabaseContract.FeedEntry.USER_COL_WIN));

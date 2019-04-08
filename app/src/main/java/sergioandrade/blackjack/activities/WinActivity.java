@@ -59,7 +59,7 @@ public class WinActivity extends PortraitScreen {
             db = new DatabaseHelper(this).getWritableDatabase();
             ContentValues values = new ContentValues();
             values.put(DatabaseContract.FeedEntry.USER_COL_WIN, res);
-            db.update(DatabaseContract.FeedEntry.TABLE_NAME, values, "_id=" + DatabaseContract.FeedEntry._ID, null);
+            db.update(DatabaseContract.FeedEntry.TABLE_NAME, values, "_id=" + DatabaseContract.FeedEntry.USER_COL_WIN, null);
             db.close();
         }
     }
